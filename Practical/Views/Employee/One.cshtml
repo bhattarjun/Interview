@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Practical.Models.EmpModel>
+
+@{
+    ViewBag.Title = "One";
+}
+
+<h2>One</h2>
+<p>Find the highest salary of each department-wise list of the employees
+a. Return the department name, employee name, location and salary</p>
+<p>
+    @Html.ActionLink("Create New", "insert")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.c_emp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_joining_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_dep_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_emp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_joining_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_dep_id)
+        </td>
+       
+    </tr>
+}
+
+    <div>
+        @Html.ActionLink("1", "one")
+        @Html.ActionLink("2", "two")
+        @Html.ActionLink("3", "three")
+    </div>
+</table>

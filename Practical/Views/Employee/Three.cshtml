@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Practical.Models.EmpModel>
+
+@{
+    ViewBag.Title = "Three";
+}
+
+<h2>Three</h2>
+<p>Find those employees whose salary is between 8000 and 12000 and location is
+AHMEDABAD.
+a. Return the employee&#39;s name, department id, salary and department location</p>
+<p>
+    @Html.ActionLink("Create New", "Insert")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.c_emp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_joining_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_dep_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_dep_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_dep_location)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_emp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_joining_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_dep_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_dep_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_dep_location)
+        </td>
+       
+    </tr>
+}
+
+    <div>
+        @Html.ActionLink("1", "one")
+        @Html.ActionLink("2", "two")
+        @Html.ActionLink("3", "three")
+    </div>
+</table>
